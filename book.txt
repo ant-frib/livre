@@ -1,0 +1,51 @@
+<chapter id="01">Le Village de Grinheim</chapter>
+<p>Vous êtes originaire du village de Grinheim, un endroit tranquille niché entre des collines verdoyantes et une forêt dense. Le village, autrefois prospère, se trouve aujourd'hui sous l'emprise d'une malédiction ancienne. Les récoltes pourrissent, les enfants tombent malades, et un sentiment d'oppression envahit l'air. Selon la légende, un artefact puissant, le Collier aux Sept Pierres, possède le pouvoir de briser la malédiction et de sauver Grinheim.</p>
+<p>Cette légende a traversé les générations, mais personne n'a osé se lancer à sa recherche. C’est vous qui allez tenter de briser ce cycle de malheur. Vous partez à l’aube, votre sac de voyage prêt, les premiers rayons du soleil caressant la terre. Vous avez entendu que le collier se trouve quelque part au-delà de la Forêt de Bois-Perdu, un endroit que peu de gens osent traverser.</p>
+<p>Le vent frais souffle à travers les arbres, vous donnant un dernier souffle de courage. Vous faites vos adieux aux habitants de Grinheim et prenez le chemin de l’aventure.</p>
+<choice idref="02">Suivre le chemin au sud, qui mène à la Forêt de Bois-Perdu. <a>Chapitre 2</a></choice>
+<choice idref="03">Vous dirigez vers l’Est, où un ancien château a été aperçu par les voyageurs. <a>Chapitre 3</a></choice>
+
+<chapter id="02">La Forêt de Bois-Perdu</chapter>
+<p>Vous entrez dans la Forêt de Bois-Perdu, un endroit sinistre et mystérieux. Les arbres s’élèvent comme des géants, leurs branches entrelacées formant un plafond presque imperméable à la lumière. Le sol est recouvert de mousse épaisse, et l’air est chargé d’humidité et d’une magie ancienne qui semble vous envelopper.</p>
+<p>Chaque bruit semble amplifié dans cette forêt. Un oiseau à la silhouette argentée s’envole à votre approche, et vous le suivez instinctivement, espérant qu’il vous guidera vers une sortie. Cependant, au bout de quelques heures de marche, vous vous rendez compte que la forêt vous a perdu. La végétation dense vous entoure, et tout semble identique.</p>
+<choice idref="03">Continuer à suivre l’oiseau, espérant qu’il vous conduira à une sortie. <a>Chaptre 3</a></choice>
+<choice idref="04">Partir vers le nord, une route qui mène apparemment vers une falaise escarpée. <a>Chapitre 4</a></choice>
+<choice idref="05">Revenir sur vos pas, vous méfiant des ombres grandissantes dans la forêt. <a>Chapitre 5</a></choice>
+
+<chapter id="03">L’Est de la Forêt et le Château</chapter>
+<p>Après un long chemin, vous apercevez finalement une lueur au loin. La végétation se fait moins dense, et vous arrivez dans une clairière où se dresse un château imposant, presque en ruines. Les murs de pierres sont couverts de lichen, et les fenêtres brisées semblent observer vos moindres faits et gestes.</p>
+<p>Le vent souffle fort, apportant un frisson glacé. Vous avancez prudemment vers la porte principale, qui grince lorsqu’elle s’ouvre sous vos doigts. À l’intérieur, l’air est lourd et poussiéreux, mais vous sentez qu’un étrange pouvoir émane de ce lieu.</p>
+<p>Dans une salle sombre, vous apercevez un éclat de lumière. Vous vous approchez prudemment, mais le château semble se refermer sur vous.</p>
+<choice idref="06">Explorer l’intérieur du château, à la recherche de l’artefact. <a>Chapitre 6</a></choice>
+<choice idref="09">Chercher à ouvrir la porte du château pour sortir de ce lieu maudit. <a>Chapitre 9</a></choice>
+
+<chapter id="04">Au Nord de la Forêt</chapter>
+<p>Le vent du nord est glacial, et le ciel s’assombrit rapidement. Vous suivez un chemin étroit bordé de rochers escarpés, jusqu'à ce que vous atteigniez une crête où la vue est magnifique. La vallée en contrebas s’étend, serpentée par une rivière cristalline. Cependant, l’instabilité du sol rend chaque pas incertain.</p>
+<p>Une soudaine bourrasque vous fait trébucher. Vous perdez l’équilibre et, en une fraction de seconde, vous êtes projeté dans le vide. Le vent hurle à vos oreilles, et la chute est rapide. Vous heurtez les rochers sur le chemin avant de vous écraser dans la vallée. </p>
+<choice idref="09">Vous êtes inconscient. <a>Chapitre 9</a></choice>
+
+<chapter id="05">Le Retour au Point de Départ</chapter>
+<p>Vous reprenez conscience, mais tout semble déformé. Les arbres, les rochers, tout semble revenir à son point de départ. Vous marchez sans but, jusqu’à ce que vous réalisiez que la forêt se referme encore sur vous. Le vent qui souffle ici semble plus fort, plus oppressant, et vous vous trouvez de nouveau sur le même chemin.</p>
+<p>Cela vous semble une éternité depuis que vous avez quitté Grinheim. La forêt vous piège dans un cycle sans fin. Vous vous sentez perdu, sans espoir.</p>
+<choice idref="02">Continuer à avancer, espérant que le chemin finira par s’ouvrir. <a>Chapitre 2</a></choice>
+
+<chapter id="06">Le Château et le Monstre</chapter>
+<p>Vous pénétrez plus profondément dans le château, la lumière de votre torche projetant des ombres inquiétantes sur les murs. Une lourde porte en fer se trouve devant vous, et à l’intérieur, vous apercevez une silhouette massive : un monstre fait de chair et de pierre, ses yeux brillants comme des gemmes.</p>
+<p>Il garde l’accès à une salle secrète, sans doute celle qui abrite le Collier aux Sept Pierres. Vous êtes seul face à lui, et le combat semble inévitable. Le monstre rugit, faisant trembler les murs du château.</p>
+<choice idref="07">Affronter le monstre, espérant que vos compétences de combattant suffiront à le vaincre. <a>Chapitre 7</a></choice>
+<choice idref="08">Chercher un moyen de contourner le monstre et d’accéder à la salle secrète sans le combattre. <a>Chapitre 8</a></choice>
+
+<chapter id="07">Le Combat avec le Monstre</chapter>
+<p>Vous engagez le combat contre la créature, frappant de toute votre force. Mais la peau de pierre du monstre est presque imperméable. Ses attaques sont puissantes, et chaque coup vous fait chanceler. Une vague de magie noire vous submerge et vous n’avez aucune chance de vous en sortir.</p>
+<choice idref="09">Vous vous effondrez, victime de cette créature terrifiante.  <a>Chapitre 9</a></choice>
+
+<chapter id="08">Le Collier aux Sept Pierres</chapter>
+<p>Vous décidez de ne pas affronter directement le monstre, mais d’utiliser votre intelligence pour contourner le danger. Vous réussissez à atteindre la salle secrète et là, sur un piédestal de marbre, repose le Collier aux Sept Pierres. Une lumière douce émane de lui, et, sans hésiter, vous le saisissez.</p>
+<p>Le monstre, inerte, ne semble plus pouvoir vous nuire. Vous avez gagné. Vous prenez le collier et vous vous sentez empli d’un pouvoir immense.</p>
+<choice idref="10">Vous prenez le collier, empli d’un pouvoir immense. <a>Chapitre 10</a></choice>
+
+<chapter id="09">La Mort de l'Aventurier</chapter>
+<p>Quoi que vous ayez choisi, votre aventure se termine tragiquement ici. La forêt, le château et ses secrets ont eu raison de vous. Dans l’ombre de ces lieux, votre histoire prend fin. Grinheim attendra un sauveur, mais ce ne sera pas vous.</p>
+
+<chapter id="10">Le Collier aux Sept Pierres</chapter>
+<p>Vous avez trouvé ce que vous cherchiez. Le Collier aux Sept Pierres brille dans vos mains, et avec lui, vous sentez que la malédiction qui pèse sur Grinheim va enfin être levée. Votre mission est accomplie. Vous n’êtes plus simplement un aventurier, mais un héros qui revient avec le pouvoir de sauver son village.</p>
