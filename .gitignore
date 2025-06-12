@@ -1,0 +1,4 @@
+# ignore les fichiers .o
+*.o
+# ignore les fichiers .hmtl
+*.html
