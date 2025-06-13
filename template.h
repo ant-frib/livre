@@ -5,6 +5,6 @@
 #define FOOTER "</body>\n</html>\n"
 #define TITLE "<h1>%s</h1>\n"
 #define PARAGRAPH "<p>%s</p>\n"
-#define LINK "<a href=\"%s.html\">%s</a><br/>\n"
+#define LINK "<p>%s<a href=\"%d.html\">%s</a></p><br/>\n"
 
 #endif

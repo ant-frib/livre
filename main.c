@@ -17,7 +17,7 @@ void process_chapter(FILE* file, char* first_line) {
     int chapter_id;
     char chapter_title[256];
     trim_newline(first_line);
-    sscanf(first_line, "<chapter id=\"%d\">%[^<]</chapter>", &chapter_id, chapter_title);
+    sscanf(first_line, "<chapter id=\"%d\">%[^<]s</chapter>", &chapter_id, chapter_title);
     char filename[64];
     snprintf(filename, sizeof(filename), "export/%0d.html", chapter_id);
     FILE* html = fopen(filename, "w");
@@ -27,43 +27,53 @@ void process_chapter(FILE* file, char* first_line) {
         trim_newline(line);
         if (strstr(line, "<chapter")) {
             strcpy(first_line, line);
+            fprintf(html, FOOTER);
             fclose(html);
             return;
         }
         if (strstr(line, "<p>")) {
             fprintf(html, "%s\n", line);
-        } else if (strstr(line, "<choice")) {
-            int idref;
-            char texte[512], lien[128];
-            if (sscanf(line, "<choice idref=\"%d\">%[^<]<a>%[^<]</a></choice>", &idref, texte, lien) == 3) {
-                fprintf(html, LINK, texte, idref, lien);
-            }
-        }
+        } 
+        if (strstr(line, "<choice")) {
+        int idref;
+        char texte[512], lien[128];
+        char *idref_ptr = strstr(line, "idref=\"");
+        char *texte_ptr = strchr(line, '>');
+        char *a_start = strstr(line, "<a>");
+        char *a_end = strstr(line, "</a>");
+
+        if (idref_ptr && texte_ptr && a_start && a_end) {
+            sscanf(idref_ptr, "idref=\"%d\"", &idref);
+            int len = a_start - (texte_ptr + 1);
+            strncpy(texte, texte_ptr + 1, len);
+            texte[len] = '\0';
+            len = a_end - (a_start + 3);
+            strncpy(lien, a_start + 3, len);
+            lien[len] = '\0';
+            fprintf(html, LINK,texte, idref, lien);
     }
-    fprintf(html, FOOTER);
-    fclose(html);
 }
 
+    }
+   fprintf(html, FOOTER);
+    fclose(html);
+}
 
 int main(void) {
     FILE* file = fopen("../livre/book.txt", "r");
     if (!file) {
-    perror("Erreur lors de l'ouverture de book.txt");
-    return 1;
-}
+        perror("Erreur lors de l'ouverture de book.txt");
+        return 1;
+    }
     char line[512];
     struct stat st = {0};
     if (stat("export", &st) == -1) {
         mkdir("export", 0700);
     }
-    while (1) {
-        if (fgets(line, sizeof(line), file)==NULL) {
-            break;
-        }
+    while (fgets(line, sizeof(line), file)) {
         line[strcspn(line, "\n")] = '\0';
-
         if (strstr(line, "<chapter")) {
-            process_chapter(file, line);
+            process_chapter(file, line);  
         }
     }
     fclose(file);
