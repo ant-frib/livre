@@ -41,6 +41,13 @@ void genererweb(char* chapter) {
 }
 
 int main() {
+    //Creer le dossier export 
+    const char *dirname = "export";
+
+    if (mkdir(dirname, 0755) == -1) {
+        perror("Erreur lors de la création du dossier");
+    }
+
     char* chapitre = "<chapter id=\"01\">Le Village de Grinheim</chapter>"
        "<p>Vous êtes originaire du village de Grinheim, un endroit tranquille niché...</p>"
        "<choice idref=\"02\">Suivre le chemin au sud <a>Chapitre 2</a></choice>"
