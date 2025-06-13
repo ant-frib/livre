@@ -1,57 +1,71 @@
-#include "template.h"
-#include <string.h>
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
-
-
-
-
-
-void genererweb(char* chapter) {
-    char** tableligne = functionligne(chapter);
-    int id;
-    int idpara;
-    char title[256];
-    char lien[256];
-    char filename[10];
-    char para[512];
-    sscanf(chapter, "<chapter id=\"%d\">%[^<]s</chapter>", &id, title);
-    snprintf(filename, sizeof(filename), "export/%d.html", id);
-    FILE *page = fopen(filename, "w");
-    if (page == NULL) {
-        fprintf(stderr, "Cannot open file %s\n", filename);
-    } else {
-        fprintf(page, HEADER, title);
-        fprintf(page, TITLE, title);
-        for (int i = 1; i < sizeof(tableligne); i++) {
-            if(tableligne[i][0]=="<"&& tableligne[i][1]=="p") {
-                sscanf(tableligne[i], "<p>%[^<]s</p>",para);
-                fprintf(page, PARAGRAPH, para);
-            }
-            else {
-                sscanf(tableligne[i], "<choice idref=\"%d\">%[^<]s<a>%[^<]s</a></choice>",&idpara,para,lien);
-                fprintf(page, PARAGRAPH, para);
-                fprintf(page, LINK, idpara,lien);
-            }
-        }
-        fprintf(page, FOOTER);
-        fclose(page);
-    }
+#include "template.h"
+#include <sys/stat.h>
+#include <sys/types.h>
+void process_chapter(FILE* file, char* first_line);
+void trim_newline(char* line);
+void trim_newline(char* line) {
+    size_t len = strlen(line);
+    if (len > 0 && line[len - 1] == '\n')
+        line[len - 1] = '\0';
 }
 
-int main() {
-    //Creer le dossier export 
-    const char *dirname = "export";
-
-    if (mkdir(dirname, 0755) == -1) {
-        perror("Erreur lors de la création du dossier");
+void process_chapter(FILE* file, char* first_line) {
+    char line[512];
+    int chapter_id;
+    char chapter_title[256];
+    trim_newline(first_line);
+    sscanf(first_line, "<chapter id=\"%d\">%[^<]</chapter>", &chapter_id, chapter_title);
+    char filename[64];
+    snprintf(filename, sizeof(filename), "export/%0d.html", chapter_id);
+    FILE* html = fopen(filename, "w");
+    fprintf(html, HEADER, chapter_title);
+    fprintf(html, TITLE, chapter_title);
+    while (fgets(line, sizeof(line), file)) {
+        trim_newline(line);
+        if (strstr(line, "<chapter")) {
+            strcpy(first_line, line);
+            fclose(html);
+            return;
+        }
+        if (strstr(line, "<p>")) {
+            fprintf(html, "%s\n", line);
+        } else if (strstr(line, "<choice")) {
+            int idref;
+            char texte[512], lien[128];
+            if (sscanf(line, "<choice idref=\"%d\">%[^<]<a>%[^<]</a></choice>", &idref, texte, lien) == 3) {
+                fprintf(html, LINK, texte, idref, lien);
+            }
+        }
     }
+    fprintf(html, FOOTER);
+    fclose(html);
+}
 
-    char* chapitre = "<chapter id=\"01\">Le Village de Grinheim</chapter>"
-       "<p>Vous êtes originaire du village de Grinheim, un endroit tranquille niché...</p>"
-       "<choice idref=\"02\">Suivre le chemin au sud <a>Chapitre 2</a></choice>"
-       "<choice idref=\"03\">Vous dirigez vers l’Est <a>Chapitre 3</a></choice>";
-    genererweb(chapitre);
+
+int main(void) {
+    FILE* file = fopen("../livre/book.txt", "r");
+    if (!file) {
+    perror("Erreur lors de l'ouverture de book.txt");
+    return 1;
+}
+    char line[512];
+    struct stat st = {0};
+    if (stat("export", &st) == -1) {
+        mkdir("export", 0700);
+    }
+    while (1) {
+        if (fgets(line, sizeof(line), file)==NULL) {
+            break;
+        }
+        line[strcspn(line, "\n")] = '\0';
+
+        if (strstr(line, "<chapter")) {
+            process_chapter(file, line);
+        }
+    }
+    fclose(file);
     return 0;
 }
