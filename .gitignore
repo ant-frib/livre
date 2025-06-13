@@ -1,6 +1,4 @@
-# ignore les fichiers .o
-*.o
-# ignore les fichiers .hmtl
-*.html
-#ignore le dossier export/
+#ignore le dossier build
+build/
+#ignore le dossier export
 export/
