@@ -2,3 +2,5 @@
 *.o
 # ignore les fichiers .hmtl
 *.html
+#ignore le dossier export/
+export/
