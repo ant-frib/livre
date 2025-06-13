@@ -19,18 +19,21 @@ void process_chapter(FILE* file, char* first_line) {
     trim_newline(first_line);
     sscanf(first_line, "<chapter id=\"%d\">%[^<]s</chapter>", &chapter_id, chapter_title);
     char filename[64];
-    snprintf(filename, sizeof(filename), "export/%0d.html", chapter_id);
+    snprintf(filename, sizeof(filename), "export/%d.html", chapter_id);
     FILE* html = fopen(filename, "w");
     fprintf(html, HEADER, chapter_title);
     fprintf(html, TITLE, chapter_title);
+    long pos = ftell(file);
     while (fgets(line, sizeof(line), file)) {
         trim_newline(line);
         if (strstr(line, "<chapter")) {
             strcpy(first_line, line);
             fprintf(html, FOOTER);
+            fseek(file, pos, SEEK_SET);
             fclose(html);
             return;
         }
+        long pos = ftell(file);
         if (strstr(line, "<p>")) {
             fprintf(html, "%s\n", line);
         } 
@@ -74,6 +77,7 @@ int main(void) {
         line[strcspn(line, "\n")] = '\0';
         if (strstr(line, "<chapter")) {
             process_chapter(file, line);  
+            
         }
     }
     fclose(file);
