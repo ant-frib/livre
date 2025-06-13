@@ -17,7 +17,7 @@ void genererweb(char* chapter) {
     char filename[10];
     char para[512];
     sscanf(chapter, "<chapter id=\"%d\">%[^<]s</chapter>", &id, title);
-    snprintf(filename, sizeof(filename), "%d.html", id);
+    snprintf(filename, sizeof(filename), "export/%d.html", id);
     FILE *page = fopen(filename, "w");
     if (page == NULL) {
         fprintf(stderr, "Cannot open file %s\n", filename);
