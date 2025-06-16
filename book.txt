@@ -48,4 +48,52 @@
 <p>Quoi que vous ayez choisi, votre aventure se termine tragiquement ici. La forêt, le château et ses secrets ont eu raison de vous. Dans l’ombre de ces lieux, votre histoire prend fin. Grinheim attendra un sauveur, mais ce ne sera pas vous.</p>
 
 <chapter id="10">Le Collier aux Sept Pierres</chapter>
-<p>Vous avez trouvé ce que vous cherchiez. Le Collier aux Sept Pierres brille dans vos mains, et avec lui, vous sentez que la malédiction qui pèse sur Grinheim va enfin être levée. Votre mission est accomplie. Vous n’êtes plus simplement un aventurier, mais un héros qui revient avec le pouvoir de sauver son village.</p>
+<p>Vous avez trouvé ce que vous cherchiez. Le Collier aux Sept Pierres brille dans vos mains, et avec lui, vous sentez que la malédiction qui pèse sur Grinheim va enfin être levée.</p>
+<p>Votre mission est presque accomplie. Il vous faut au rentrer au village le plus vite. Rempli d'espoir, vous préméditez votre retour en héros au village et le triomphe qui vous y attend.</p>
+<choice idref="11">Sortir du chateau en essayant de vous souvenir par là où vous êtes arrivé. <a>Chapitre 11</a></choice>
+
+<chapter id="11">Le Chemin des Âmes</chapter>
+<p>Alors que vous quittez le château avec le collier, une brume étrange se lève. Le paysage se déforme, et vous vous retrouvez sur un sentier spectral bordé de statues figées. Chacune semble vous observer, comme si elles avaient autrefois été vivantes.</p>
+<p>Un murmure s’élève, vous appelant par votre nom. Le chemin s’efface derrière vous, ne laissant que l’avant comme seule option.</p>
+<choice idref="12">Avancer au cœur du chemin, malgré la peur qui vous étreint. <a>Chapitre 12</a></choice>
+<choice idref="13">Tenter de rebrousser chemin et retrouver le château. <a>Chapitre 13</a></choice>
+
+<chapter id="12">L'Épreuve de Mémoire</chapter>
+<p>Le sentier vous conduit à une clairière où flottent des reflets du passé. Vous voyez des images de votre village, de votre enfance, de vos peurs enfouies. Une voix vous intime de sacrifier un souvenir pour avancer.</p>
+<p>Quel souvenir êtes-vous prêt à abandonner pour sauver Grinheim ?</p>
+<choice idref="14">Renoncer au souvenir de votre famille pour poursuivre votre quête. <a>Chapitre 14</a></choice>
+<choice idref="15">Refuser de sacrifier quoi que ce soit. <a>Chapitre 15</a></choice>
+
+<chapter id="13">Retour Impossible</chapter>
+<p>Vous essayez de revenir sur vos pas, mais la brume s’épaissit, et les statues vous barrent la route. L’une d’elles bouge lentement, posant sa main glacée sur votre épaule. Peu à peu votre peau devient gisâtre et se durcit. Vous êtes figé, incapable de bouger.</p>
+<choice idref="09">Vous sombrez dans l’oubli. <a>Chapitre 9</a></choice>
+
+<chapter id="14">L'Oubli et la Force</chapter>
+<p>En laissant votre souvenir derrière vous, vous ressentez une douleur aiguë, puis un vide étrange. Mais vous avancez. Une lumière dorée vous entoure, signe que vous avez franchi une épreuve magique.</p>
+<choice idref="16">Continuer votre route, transformé par le sacrifice. <a>Chapitre 16</a></choice>
+
+<chapter id="15">L’Âme Résistante</chapter>
+<p>Vous refusez de céder à l’exigence de l’esprit. Une force invisible vous repousse violemment. Vous vous réveillez au bord du chemin, seul, et le collier semble avoir perdu de son éclat.</p>
+<choice idref="17">Essayer de réactiver le pouvoir du collier. <a>Chapitre 17</a></choice>
+
+<chapter id="16">La Porte du Jugement</chapter>
+<p>Devant vous se dresse une grande arche faite d’ossements entrelacés. Une voix éthérée vous demande si vous êtes digne de porter le pouvoir du collier. Une ultime épreuve vous attend.</p>
+<choice idref="18">Accepter le jugement et pénétrer sous l’arche. <a>Chapitre 18</a></choice>
+<choice idref="19">Refuser cette épreuve et fuir vers Grinheim. <a>Chapitre 19</a></choice>
+
+<chapter id="17">La Magie Faillie</chapter>
+<p>Vous tentez de canaliser l’énergie du collier, mais sans le souvenir sacrifié, sa puissance ne répond plus à votre appel. Une entité sombre émerge, attirée par votre faiblesse.</p>
+<choice idref="09">Vous êtes consumé par les ténèbres. <a>Chapitre 9</a></choice>
+
+<chapter id="18">L'Ascension du Gardien</chapter>
+<p>L’arche vous accepte. Vous traversez et ressentez un flot de visions anciennes. Vous n’êtes plus le simple porteur : vous devenez le gardien du pouvoir, son protecteur et son guide.</p>
+<choice idref="20">Retourner à Grinheim, prêt à lever la malédiction. <a>Chapitre 20</a></choice>
+
+<chapter id="19">Le Retour Prématuré</chapter>
+<p>Vous fuyez l’arche, collier en main, mais vous sentez que quelque chose manque. Grinheim vous accueille, mais le pouvoir ne se manifeste pas. La malédiction demeure, et les regards pleins d’espoir se détournent.</p>
+<choice idref="09">Vous vivez avec le poids de votre échec. <a>Chapitre 9</a></choice>
+
+<chapter id="20">Le Salut de Grinheim</chapter>
+<p>De retour au village, vous levez le collier au ciel. Une lumière traverse les nuages, purifiant les champs, guérissant les enfants. Le mal est levé. Les cloches sonnent, et les habitants vous acclament comme le sauveur de Grinheim.</p>
+<p>Votre nom vivra à jamais dans les légendes du village.</p>
+
