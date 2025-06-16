@@ -8,7 +8,7 @@
 <chapter id="02">La Forêt de Bois-Perdu</chapter>
 <p>Vous entrez dans la Forêt de Bois-Perdu, un endroit sinistre et mystérieux. Les arbres s’élèvent comme des géants, leurs branches entrelacées formant un plafond presque imperméable à la lumière. Le sol est recouvert de mousse épaisse, et l’air est chargé d’humidité et d’une magie ancienne qui semble vous envelopper.</p>
 <p>Chaque bruit semble amplifié dans cette forêt. Un oiseau à la silhouette argentée s’envole à votre approche, et vous le suivez instinctivement, espérant qu’il vous guidera vers une sortie. Cependant, au bout de quelques heures de marche, vous vous rendez compte que la forêt vous a perdu. La végétation dense vous entoure, et tout semble identique.</p>
-<choice idref="03">Continuer à suivre l’oiseau, espérant qu’il vous conduira à une sortie. <a>Chaptre 3</a></choice>
+<choice idref="03">Continuer à suivre l’oiseau, espérant qu’il vous conduira à une sortie. <a>Chapitre 3</a></choice>
 <choice idref="04">Partir vers le nord, une route qui mène apparemment vers une falaise escarpée. <a>Chapitre 4</a></choice>
 <choice idref="05">Revenir sur vos pas, vous méfiant des ombres grandissantes dans la forêt. <a>Chapitre 5</a></choice>
 

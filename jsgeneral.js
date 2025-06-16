@@ -1,5 +1,5 @@
 const elements = Array.from(document.body.children);
-const speed = 15; // ms par caractère
+const speed = 20; 
 let current = 0;
 
 function typeWriter(el, callback) {
@@ -30,5 +30,5 @@ function playAll() {
     playAll();
   });
 }
-
+console.log("dsgdgegezgegegegegegeg")
 playAll();
