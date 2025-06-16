@@ -1,5 +1,5 @@
 const elements = Array.from(document.body.children);
-const speed = 5; 
+const speed = 3; 
 let current = 0;
 
 function typeWriter(el, callback) {
