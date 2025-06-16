@@ -10,3 +10,16 @@ p{
     font-style: oblique;
     color: red;
 }
+body {
+    font-family:"VT323", monospace;
+}
+
+h1 {
+    font-size: 300%;
+}
+
+p {
+    font-size:125%;
+}
+
+
