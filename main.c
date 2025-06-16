@@ -21,7 +21,7 @@ void process_chapter(FILE* file, char* first_line) {
     char filename[64];
     snprintf(filename, sizeof(filename), "export/%d.html", chapter_id);
     FILE* html = fopen(filename, "w");
-    fprintf(html, HEADER, chapter_title);
+    fprintf(html, HEADER, chapter_title,chapter_id);
     fprintf(html, TITLE, chapter_title);
     long pos = ftell(file);
     while (fgets(line, sizeof(line), file)) {
