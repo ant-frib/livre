@@ -22,4 +22,6 @@ p {
     font-size:125%;
 }
 
-
+body > * {
+  visibility: hidden; 
+}
