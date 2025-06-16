@@ -1,6 +1,13 @@
 const elements = Array.from(document.body.children);
 const speed = 3; 
 let current = 0;
+document.addEventListener('DOMContentLoaded', () => {
+    const audio = new Audio('../musiquedouce.mp3');
+    audio.loop = true; 
+    document.body.addEventListener('click', () => {
+        audio.play();
+    }, { once: true });
+});
 
 function typeWriter(el, callback) {
   const clone = el.cloneNode(true); // copie exacte avec HTML complet
