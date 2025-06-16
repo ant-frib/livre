@@ -53,7 +53,7 @@ void process_chapter(FILE* file, char* first_line) {
             len = a_end - (a_start + 3);
             strncpy(lien, a_start + 3, len);
             lien[len] = '\0';
-            fprintf(html, LINK,texte, idref, lien);
+            fprintf(html, LINK,texte, idref,chapter_id, lien);
     }
 }
 
