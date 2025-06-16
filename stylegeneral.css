@@ -1,55 +1,62 @@
-
 body {
-    font-family: 'VT323', monospace;
-    background: linear-gradient(#1f1a17, #2b2522);
-    color: #f5f5dc;
-    padding: 40px;
-    max-width: 800px;
-    margin: auto;
-    line-height: 1.8;
-    font-size: 20px;
-    box-shadow: 0 0 20px rgba(0,0,0,0.6);
-    border-radius: 10px;
+    font-family:"VT323", monospace;
+    background-image: url("Village.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    overflow-x: hidden;
+    background-attachment: fixed;
 }
 
-
 h1 {
-    font-size: 48px;
-    color: #ffcc00;
-    text-align: center;
-    margin-bottom: 30px;
-    text-shadow: 2px 2px 8px #000;
+    font-size: 300%;
+    background: linear-gradient(to right, black, rgba(100, 100, 100, 0));
+    color: #fff;
+    padding: 20px 40px;
+    width: 100vw;
+    box-sizing: border-box;
+    animation: slideInFromRight 1s ease-out forwards;
+
 }
 
 p {
-    margin-bottom: 25px;
-    text-align: justify;
+    font-size:125%;
+    align-items: center;
+}
+
+body > * {
+  visibility: hidden; /* cache tous les enfants du body */
+}
+
+.choice {
+    background: linear-gradient(to right, black, rgba(100, 100, 100, 0));
+    color: #fff;
+    padding: 20px 40px;
+    width: 100vw;
+    box-sizing: border-box;
+    transition: transform 0.3s ease; /* Animation fluide */
+    display: inline-block;
+}
+
+.choice a {
+  color: white;
+  font-weight: bold;
+}
+
+.choice:hover {
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.5);
+  transform: scale(1.07);
+  cursor: pointer;
+}
+
+@keyframes slideInFromRight {
+  from {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
 }
 
 
-a {
-    color: #00ffff;
-    text-decoration: none;
-    font-weight: bold;
-    transition: color 0.3s ease;
-}
-
-a:hover {
-    color: #ff6600;
-    text-shadow: 0 0 5px #fff;
-}
-
-
-body::before {
-    content: '';
-    position: fixed;
-    top: 0; left: 0; right: 0; bottom: 0;
-    background-image: url('https://www.transparenttextures.com/patterns/paper-fibers.png');
-    opacity: 0.05;
-    z-index: -1;
-}
-
-body {
-    border: 2px solid #3b322b;
-    background-color: #1f1a17;
-}
