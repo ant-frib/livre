@@ -7,7 +7,7 @@
 "<meta charset=\"UTF-8\">\n" \
 "<title>%s</title>\n" \
 "<link rel=\"stylesheet\" href=\"../stylegeneral.css\" />\n" \
-"<script src=\"../script.js\"></script>\n" \
+"<script src=\"../jsgeneral.js\ defer"></script>\n" \
 "<link rel=\"preconnect\" href=\"https://fonts.googleapis.com\">\n" \
 "<link rel=\"preconnect\" href=\"https://fonts.gstatic.com\" crossorigin>\n" \
 "<link href=\"https://fonts.googleapis.com/css2?family=VT323&display=swap\" rel=\"stylesheet\">\n" \
