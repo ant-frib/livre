@@ -22,10 +22,10 @@ p {
     font-size:125%;
     align-items: center;
 }
-
+/*
 body > * {
-  visibility: hidden; /* cache tous les enfants du body */
-}
+  visibility: hidden; 
+}*/
 
 .choice {
     background: linear-gradient(to right, black, rgba(100, 100, 100, 0));
