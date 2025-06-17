@@ -1,0 +1,14 @@
+body {
+    font-family:"VT323", monospace;
+    background-image: url("../assets/Chateau.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    overflow-x: hidden;
+    background-attachment: fixed;
+}
+
+p {
+    font-size:125%;
+    align-items: center;
+    color:#fff;
+}
