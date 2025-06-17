@@ -101,5 +101,9 @@
 <p>Le choc a été violent, mais contre toute attente, vous reprenez connaissance. Votre corps endolori repose sur un lit de mousse humide, protégé miraculeusement des pires impacts. Autour de vous, la vallée semble étrangement silencieuse, comme figée dans le temps.</p>
 <p>En tentant de vous relever, votre main effleure une surface lisse et froide, à moitié enfouie sous les feuilles mortes. Vous dégagez un objet aux formes inconnues : une pierre noire aux reflets bleutés, gravée de symboles mouvants. L’artefact pulse faiblement, comme s’il respirait.</p>
 <p>À peine l’avez-vous touché qu’une chaleur se diffuse dans votre bras, et des visions vous assaillent : des ruines oubliées, une voix ancienne, et une lumière engloutie sous terre. Cet objet n’est pas qu’un simple vestige… c’est une clé. Mais devez-vous vraiment l’utiliser ?</p>
-<choice idref="">Vous activez l’artefact. <a>Chapitre ???</a></choice>
-<choice idref="5">Vous choisissez de ne pas l’utiliser. <a>Chapitre 5</a></choice>
+<choice idref="09">Vous activez l’artefact. <a>Chapitre ???</a></choice>
+<choice idref="05">Vous choisissez de ne pas l’utiliser. <a>Chapitre 5</a></choice>
+
+
+<chapter id="22">Bienvenue dans la page secrete</chapter>
+<p>Pas mal pour un mortel</p>
