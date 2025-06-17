@@ -49,6 +49,27 @@ document.addEventListener("DOMContentLoaded", () => {
     pourSpan.style.display = "none";
   }
 });
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /*
 const elements = Array.from(document.body.children);
 const speed = 0.1; // ms par caractère
