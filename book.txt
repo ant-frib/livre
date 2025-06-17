@@ -22,7 +22,7 @@
 <chapter id="04">Au Nord de la Forêt</chapter>
 <p>Le vent du nord est glacial, et le ciel s’assombrit rapidement. Vous suivez un chemin étroit bordé de rochers escarpés, jusqu'à ce que vous atteigniez une crête où la vue est magnifique. La vallée en contrebas s’étend, serpentée par une rivière cristalline. Cependant, l’instabilité du sol rend chaque pas incertain.</p>
 <p>Une soudaine bourrasque vous fait trébucher. Vous perdez l’équilibre et, en une fraction de seconde, vous êtes projeté dans le vide. Le vent hurle à vos oreilles, et la chute est rapide. Vous heurtez les rochers sur le chemin avant de vous écraser dans la vallée. </p>
-<choice idref="09">Vous êtes inconscient. <a>Chapitre 9</a></choice>
+<choice idref="21">Vous êtes inconscient. <a>Chapitre 21</a></choice>
 
 <chapter id="05">Le Retour au Point de Départ</chapter>
 <p>Vous reprenez conscience, mais tout semble déformé. Les arbres, les rochers, tout semble revenir à son point de départ. Vous marchez sans but, jusqu’à ce que vous réalisiez que la forêt se referme encore sur vous. Le vent qui souffle ici semble plus fort, plus oppressant, et vous vous trouvez de nouveau sur le même chemin.</p>
@@ -97,3 +97,9 @@
 <p>De retour au village, vous levez le collier au ciel. Une lumière traverse les nuages, purifiant les champs, guérissant les enfants. Le mal est levé. Les cloches sonnent, et les habitants vous acclament comme le sauveur de Grinheim.</p>
 <p>Votre nom vivra à jamais dans les légendes du village.</p>
 
+<chapter id="21">L'Artefact de la Vallée</chapter>
+<p>Le choc a été violent, mais contre toute attente, vous reprenez connaissance. Votre corps endolori repose sur un lit de mousse humide, protégé miraculeusement des pires impacts. Autour de vous, la vallée semble étrangement silencieuse, comme figée dans le temps.</p>
+<p>En tentant de vous relever, votre main effleure une surface lisse et froide, à moitié enfouie sous les feuilles mortes. Vous dégagez un objet aux formes inconnues : une pierre noire aux reflets bleutés, gravée de symboles mouvants. L’artefact pulse faiblement, comme s’il respirait.</p>
+<p>À peine l’avez-vous touché qu’une chaleur se diffuse dans votre bras, et des visions vous assaillent : des ruines oubliées, une voix ancienne, et une lumière engloutie sous terre. Cet objet n’est pas qu’un simple vestige… c’est une clé. Mais devez-vous vraiment l’utiliser ?</p>
+<choice idref="">Vous activez l’artefact. <a>Chapitre ???</a></choice>
+<choice idref="5">Vous choisissez de ne pas l’utiliser. <a>Chapitre 5</a></choice>
