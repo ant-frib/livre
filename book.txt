@@ -37,12 +37,11 @@
 
 <chapter id="07">Le Combat avec le Monstre</chapter>
 <p>Vous engagez le combat contre la créature, frappant de toute votre force. Mais la peau de pierre du monstre est presque imperméable. Ses attaques sont puissantes, et chaque coup vous fait chanceler. Une vague de magie noire vous submerge et vous n’avez aucune chance de vous en sortir.</p>
-<choice idref="09">Vous vous effondrez, victime de cette créature terrifiante.  <a>Chapitre 9</a></choice>
 
 <chapter id="08">Le Collier aux Sept Pierres</chapter>
-<p>Vous décidez de ne pas affronter directement le monstre, mais d’utiliser votre intelligence pour contourner le danger. Vous réussissez à atteindre la salle secrète et là, sur un piédestal de marbre, repose le Collier aux Sept Pierres. Une lumière douce émane de lui, et, sans hésiter, vous le saisissez.</p>
-<p>Le monstre, inerte, ne semble plus pouvoir vous nuire. Vous avez gagné. Vous prenez le collier et vous vous sentez empli d’un pouvoir immense.</p>
-<choice idref="10">Vous prenez le collier, empli d’un pouvoir immense. <a>Chapitre 10</a></choice>
+<p>Après un combat acharné, le monstre gît désormais inerte à vos pieds. Vous avancez prudemment dans la salle secrète, où, sur un piédestal de marbre, repose le Collier aux Sept Pierres. Une lumière douce irradie de cet artefact, et sans hésiter, vous le saisissez.</p>
+<p>La menace du monstre est enfin écartée. En prenant le collier, une puissante énergie se répand en vous, vous emplissant d’un pouvoir immense.</p>
+<choice idref="10">Vous saisissez le collier, empli d’un pouvoir extraordinaire. <a>Chapitre 10</a></choice>
 
 <chapter id="09">La Mort de l'Aventurier</chapter>
 <p>Quoi que vous ayez choisi, votre aventure se termine tragiquement ici. La forêt, le château et ses secrets ont eu raison de vous. Dans l’ombre de ces lieux, votre histoire prend fin. Grinheim attendra un sauveur, mais ce ne sera pas vous.</p>
