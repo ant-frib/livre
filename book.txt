@@ -103,3 +103,7 @@
 <p>À peine l’avez-vous touché qu’une chaleur se diffuse dans votre bras, et des visions vous assaillent : des ruines oubliées, une voix ancienne, et une lumière engloutie sous terre. Cet objet n’est pas qu’un simple vestige… c’est une clé. Mais devez-vous vraiment l’utiliser ?</p>
 <choice idref="09">Vous activez l’artefact. <a>Chapitre ???</a></choice>
 <choice idref="05">Vous choisissez de ne pas l’utiliser. <a>Chapitre 5</a></choice>
+
+
+<chapter id="22">Bienvenue dans la page secrete</chapter>
+<p>Pas mal pour un mortel</p>
