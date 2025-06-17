@@ -41,7 +41,7 @@ window.addEventListener("DOMContentLoaded", () => {
 
   function attaquer() {
     const degatsJoueur = Math.floor(Math.random() * 20) + 5;
-    const degatsMonstre = Math.floor(Math.random() * 20) + 3;
+    const degatsMonstre = Math.floor(Math.random() * 20) + 5;
 
     vieMonstre -= degatsJoueur;
     vieJoueur -= degatsMonstre;

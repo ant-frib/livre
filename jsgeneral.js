@@ -17,7 +17,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const chemin = window.location.pathname;
   const pageActuelle = chemin.substring(chemin.lastIndexOf("/") + 1);
 
-  const pagesAutorisees = ["1.html"];
+  const pagesAutorisees = ["17.html"];
 
   if (pagesAutorisees.includes(pageActuelle)) {
     let rand1 =
@@ -32,7 +32,7 @@ document.addEventListener("DOMContentLoaded", () => {
       Math.floor(Math.random() * 2) +
       Math.floor(Math.random() * 2);
     pour.innerHTML = "Vous avez "+ rand1 +" chances sur 10 de vous en sortir";
-    let lien = document.getElementById("1");
+    let lien = document.getElementById("17");
 
     lien.addEventListener("click", (e) => {
       if (Math.floor(Math.random() * 11) >= rand1) {
@@ -41,7 +41,7 @@ document.addEventListener("DOMContentLoaded", () => {
         window.location.href = "9.html";
       } else {
         console.log("Redirection vers 2.html");
-        window.location.href = "2.html";
+        window.location.href = "20.html";
       }
     });
     pourSpan.style.display = "inline";

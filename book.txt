@@ -81,8 +81,8 @@
 <choice idref="19">Refuser cette épreuve et fuir vers Grinheim. <a>Chapitre 19</a></choice>
 
 <chapter id="17">La Magie Faillie</chapter>
-<p>Vous tentez de canaliser l’énergie du collier, mais sans le souvenir sacrifié, sa puissance ne répond plus à votre appel. Une entité sombre émerge, attirée par votre faiblesse.</p>
-<choice idref="09">Vous êtes consumé par les ténèbres. <a>Chapitre 9</a></choice>
+<p>Sans le poid du sacrifice vous peinez à maitriser le colier</p>
+<choice idref="20">Essayez de le maitrisez<a>Chapitre 20</a></choice>
 
 <chapter id="18">L'Ascension du Gardien</chapter>
 <p>L’arche vous accepte. Vous traversez et ressentez un flot de visions anciennes. Vous n’êtes plus le simple porteur : vous devenez le gardien du pouvoir, son protecteur et son guide.</p>
