@@ -1,0 +1,15 @@
+body {
+    font-family:"VT323", monospace;
+    background-image: url("../assets/Mort.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    overflow-x: hidden;
+    background-attachment: fixed;
+}
+
+p {
+    font-size:200%;
+    align-items: center;
+    color:#ffffff;
+    text-align: center;
+}
