@@ -1,4 +1,38 @@
 
+document.addEventListener('DOMContentLoaded', () => {
+    const audio = new Audio('./assets/musiquedouce.mp3');
+    audio.loop = true; 
+    document.body.addEventListener('click', () => {
+        audio.play();
+    }, { once: true });
+});
+
+
+let pour = document.getElementById("pour");
+
+
+document.addEventListener("DOMContentLoaded", () => {
+  const pourSpan = document.getElementById("pour");
+
+  const chemin = window.location.pathname;
+  const pageActuelle = chemin.substring(chemin.lastIndexOf("/") + 1);
+
+  const pagesAutorisees = ["1.html"];
+
+  if (pagesAutorisees.includes(pageActuelle)) {
+    let rand1 =
+      Math.floor(Math.random() * 2) +
+      Math.floor(Math.random() * 2) +
+      Math.floor(Math.random() * 2) +
+      Math.floor(Math.random() * 2) +
+      Math.floor(Math.random() * 2) +
+      Math.floor(Math.random() * 2) +
+      Math.floor(Math.random() * 2) +
+      Math.floor(Math.random() * 2) +
+      Math.floor(Math.random() * 2) +
+      Math.floor(Math.random() * 2);
+    pour.innerHTML = "Vous avez "+ rand1 +" chances sur 10 de vous en sortir";
+    let lien = document.getElementById("1");
 
     lien.addEventListener("click", (e) => {
       if (Math.floor(Math.random() * 11) >= rand1) {
@@ -10,6 +44,13 @@
         window.location.href = "2.html";
       }
     });
+    pourSpan.style.display = "inline";
+  } else {
+    pourSpan.style.display = "none";
+  }
+});
+
+
 
 
 
