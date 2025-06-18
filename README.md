@@ -30,8 +30,8 @@ Exemple :
 <choice idref="2"><a>Aller à la suite</a>lien.html</choice>
 <chapter id="2">Chapitre suivant</chapter>
 <p>Vous êtes maintenant dans le deuxième chapitre.</p>
-
- Système de combat (HTML + JS)
+```markdown
+ Système de combat (HTML + JS) :
 
 Ajoute dynamiquement un encart de combat joueur vs monstre avec :
 
