@@ -26,7 +26,7 @@
 
 <chapter id="05">Le Retour au Point de Départ</chapter>
 <p>Vous reprenez conscience, mais tout semble déformé. Les arbres, les rochers, tout semble revenir à son point de départ. Vous marchez sans but, jusqu’à ce que vous réalisiez que la forêt se referme encore sur vous. Le vent qui souffle ici semble plus fort, plus oppressant, et vous vous trouvez de nouveau sur le même chemin.</p>
-<p>Cela vous semble une éternité depuis que vous avez quitté Grinheim. La forêt vous piège dans un cycle sans fin. Vous vous sentez perdu, sans espoir.</p>
+<p>Cela vous semble une éternité depuis que vous avez quitté Grinheim. La forêt vous piège dans un cycle sans fin. Vous vous sentez perdu, sans espoir. Mais regardez par terre il y a une note avec écrit dessus : "gobelindu44"</p>
 <choice idref="02">Continuer à avancer, espérant que le chemin finira par s’ouvrir. <a>Chapitre 2</a></choice>
 
 <chapter id="06">Le Château et le Monstre</chapter>
