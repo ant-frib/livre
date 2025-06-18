@@ -3,7 +3,7 @@ body {
     background-image: url("../assets/Combat.jpg");
     background-size: cover;
     background-repeat: no-repeat;
-    overflow: hidden;
+    overflow-y: auto;
     background-attachment: fixed;
 }
 
@@ -14,9 +14,8 @@ p {
 }
 
 #combat {
-    position: fixed;
-    left: 50%;
-    transform: translateX(-50%);
+    position: relative;
+    margin: 40px auto; 
     width: 90%;
     max-width: 800px;
     background: rgba(0, 0, 0, 0.7);
@@ -95,4 +94,16 @@ p {
 
 .shake {
   animation: shake 0.3s;
+}
+
+@keyframes sand {
+  0% { transform: translateX(0); transform: translateY(0) }
+  25% { transform: translateX(-5px); transform: translateY(-5px) }
+  50% { transform: translateX(10px); transform: translateY(10px) }
+  75% { transform: translateX(-15px); transform: translateY(-15px) }
+  100% { transform: translateX(0); transform: translateY(0) }
+}
+
+.sand {
+  animation: sand 0.3s;
 }

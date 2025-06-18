@@ -53,6 +53,9 @@ window.addEventListener("DOMContentLoaded", () => {
   monstre.style.display = "inline-block";
 
   MonstreCombat.appendChild(monstre);
+  const Coup = new Audio('../assets/Slash.mp3');
+  const Lancer = new Audio('../assets/JetSable.mp3');
+  const Mort = new Audio('../assets/Defeat.mp3');
   combatDiv.appendChild(MonstreCombat);
 
   let choix = document.querySelector("p.choice");
@@ -77,24 +80,24 @@ window.addEventListener("DOMContentLoaded", () => {
     vieMonstre -= degatsJoueur;
 
     if (jet <= 0) {
-      vieJoueur += 0
+      vieJoueur += 0;
+      Coup.play();
       messageCombat.textContent = `Vous infligez ${degatsJoueur} dégâts au monstre. Il rate son attaque !.`;
     }
     else {
       vieJoueur -= degatsMonstre;
+      Coup.play();
       messageCombat.textContent = `Vous infligez ${degatsJoueur} dégâts au monstre. Il vous inflige ${degatsMonstre} dégâts.`;
     }
 
     vieJoueurSpan.textContent = vieJoueur > 0 ? vieJoueur : 0;
     vieMonstreSpan.textContent = vieMonstre > 0 ? vieMonstre : 0;
 
-   
-/*
-    monster.classList.add("shake");
+    monstre.classList.add("shake");
     setTimeout(() => {
-      monster.classList.remove("shake");
+      monstre.classList.remove("shake");
     }, 300);
-*/
+
     if (vieMonstre <= 0 && vieJoueur > 0) {
       messageCombat.textContent = "Bravo ! Vous avez vaincu le monstre !";
       btnAttaquer.disabled = true;
@@ -103,6 +106,7 @@ window.addEventListener("DOMContentLoaded", () => {
       }, 2000);
     } else if (vieJoueur <= 0) {
       messageCombat.textContent = "Vous avez été vaincu par le monstre...";
+      Mort.play();
       btnAttaquer.disabled = true;
       setTimeout(() => {
         window.location.href = "9.html";
@@ -120,17 +124,25 @@ window.addEventListener("DOMContentLoaded", () => {
     if (jet <= 0) {
       vieJoueur += 0
       messageCombat.textContent = `Vous baissez de ${actionJoueur} la précison du monstre. Il rate son attaque !.\nPrécison du monstre : ${100-precisonMonstre}`;
+      Lancer.play();
     }
     else {
       vieJoueur -= degatsMonstre;
       messageCombat.textContent = `Vous baissez de ${actionJoueur} la précison du monstre mais il vous inflige ${degatsMonstre} dégâts !\nPrécison du monstre : ${100-precisonMonstre}`;
+      Lancer.play();
     }
 
     vieJoueurSpan.textContent = vieJoueur > 0 ? vieJoueur : 0;
     vieMonstreSpan.textContent = vieMonstre > 0 ? vieMonstre : 0;
 
+    monstre.classList.add("sand");
+    setTimeout(() => {
+      monstre.classList.remove("sand");
+    }, 300);
+
     if (vieJoueur <= 0) {
       messageCombat.textContent = "Vous avez été vaincu par le monstre...";
+      Mort.play();
       btnAttaquer.disabled = true;
       setTimeout(() => {
         window.location.href = "9.html";
