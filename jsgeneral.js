@@ -1,6 +1,6 @@
 
 document.addEventListener('DOMContentLoaded', () => {
-    const audio = new Audio('./assets/musiquedouce.mp3');
+    const audio = new Audio('assets/musiquedouce.mp3');
     audio.loop = true; 
     document.body.addEventListener('click', () => {
         audio.play();
@@ -49,7 +49,6 @@ document.addEventListener("DOMContentLoaded", () => {
     pourSpan.style.display = "none";
   }
 });
-
 
 
 

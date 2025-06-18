@@ -33,29 +33,28 @@ window.addEventListener("DOMContentLoaded", () => {
   combatDiv.appendChild(btnAttaquer);
   combatDiv.appendChild(btnDefendre);
   combatDiv.appendChild(messageCombat);
-/*
+
   // Crée la div contenant le monstre
-  const monsterWrapper = document.createElement("div");
-  monsterWrapper.id = "monster-wrapper";
-  monsterWrapper.style.backgroundColor = "rgba(255,255,255,0.05)";
-  monsterWrapper.style.border = "1px solid rgba(255,255,255,0.2)";
-  monsterWrapper.style.marginTop = "1em";
-  monsterWrapper.style.padding = "10px";
-  monsterWrapper.style.textAlign = "center";
-  monsterWrapper.style.borderRadius = "10px";
+  const MonstreCombat = document.createElement("div");
+  MonstreCombat.id = "monstre-combat";
+  MonstreCombat.style.backgroundColor = "rgba(255,255,255,0.05)";
+  MonstreCombat.style.border = "1px solid rgba(255,255,255,0.2)";
+  MonstreCombat.style.marginTop = "1em";
+  MonstreCombat.style.padding = "10px";
+  MonstreCombat.style.paddingBottom = 0
+  MonstreCombat.style.textAlign = "center";
+  MonstreCombat.style.borderRadius = "10px";
 
   // Crée et ajoute l'image du monstre
-  const monster = document.createElement("img");
-  monster.id = "monster";
-  monster.src = "../assets/Monstre.png";
-  monster.alt = "Monstre";
-  monster.style.display = "inline-block";
-  monster.style.maxWidth = "150px";
-  monster.style.imageRendering = "pixelated";
+  const monstre = document.createElement("img");
+  monstre.id = "monstre";
+  monstre.src = "../assets/Monstre-Cut.png";
+  monstre.alt = "Monstre";
+  monstre.style.display = "inline-block";
 
-  monsterWrapper.appendChild(monster);
-  combatDiv.appendChild(monsterWrapper);
-*/
+  MonstreCombat.appendChild(monstre);
+  combatDiv.appendChild(MonstreCombat);
+
   let choix = document.querySelector("p.choice");
   if (choix) {
     choix.parentNode.insertBefore(combatDiv, choix);
@@ -90,12 +89,12 @@ window.addEventListener("DOMContentLoaded", () => {
     vieMonstreSpan.textContent = vieMonstre > 0 ? vieMonstre : 0;
 
    
-
-    /*monster.classList.add("shake");
+/*
+    monster.classList.add("shake");
     setTimeout(() => {
       monster.classList.remove("shake");
-    }, 300);*/
-
+    }, 300);
+*/
     if (vieMonstre <= 0 && vieJoueur > 0) {
       messageCombat.textContent = "Bravo ! Vous avez vaincu le monstre !";
       btnAttaquer.disabled = true;
@@ -120,11 +119,11 @@ window.addEventListener("DOMContentLoaded", () => {
 
     if (jet <= 0) {
       vieJoueur += 0
-      messageCombat.textContent = `Vous baissez de ${actionJoueur} la précison du monstre. Il rate son attaque !.\nPrécison : ${100-precisonMonstre}`;
+      messageCombat.textContent = `Vous baissez de ${actionJoueur} la précison du monstre. Il rate son attaque !.\nPrécison du monstre : ${100-precisonMonstre}`;
     }
     else {
       vieJoueur -= degatsMonstre;
-      messageCombat.textContent = `Vous baissez de ${actionJoueur} la précison du monstre mais il vous inflige ${degatsMonstre} dégâts !\nPrécison : ${100-precisonMonstre}`;
+      messageCombat.textContent = `Vous baissez de ${actionJoueur} la précison du monstre mais il vous inflige ${degatsMonstre} dégâts !\nPrécison du monstre : ${100-precisonMonstre}`;
     }
 
     vieJoueurSpan.textContent = vieJoueur > 0 ? vieJoueur : 0;

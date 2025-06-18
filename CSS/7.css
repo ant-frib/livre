@@ -3,7 +3,7 @@ body {
     background-image: url("../assets/Combat.jpg");
     background-size: cover;
     background-repeat: no-repeat;
-    overflow-x: hidden;
+    overflow: hidden;
     background-attachment: fixed;
 }
 
@@ -64,7 +64,7 @@ p {
     font-size: 120%;
     font-family: inherit;
     background-color: grey;
-    color: rgb(19, 78, 4);
+    color: rgb(51, 80, 4);
     border: none;
     border-radius: 8px;
     cursor: pointer;
@@ -72,20 +72,17 @@ p {
 }
 
 #btn-action:hover {
-    background-color: rgb(19, 78, 4);
+    background-color: rgb(51, 80, 4);
     transform: scale(1.1);
     color: green;
 }
 
-#monster {
-    position:fixed;
-    text-align:center;
-  display: block;
+#monstre {
   bottom:0;
-  margin: 20px auto 40px auto;
-  max-width: 150px;
   image-rendering: pixelated;
-  transition: transform 0.1s ease;
+  width: 50%;       
+  height: auto;
+  transition: transform 0.1s ease; 
 }
 
 @keyframes shake {
