@@ -76,6 +76,24 @@ p {
     color: green;
 }
 
+#btn-boire {
+  padding: 20px 60px;
+  font-size: 120%;
+  font-family: inherit;
+  background-color: grey;
+  color: rgb(17, 5, 71);
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: transform 1s ease, background-color 0.3s ease;
+}
+
+#btn-boire:hover {
+    background-color: rgb(17, 5, 71);
+    transform: scale(1.1);
+    color: blue;
+}
+
 #monstre {
   bottom:0;
   image-rendering: pixelated;

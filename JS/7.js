@@ -25,6 +25,11 @@ window.addEventListener("DOMContentLoaded", () => {
   btnDefendre.textContent = "Jeter du sable";
   btnDefendre.style.margin = "1em 1em";
 
+  let btnBoire = document.createElement("button");
+  btnBoire.id = "btn-boire";
+  btnBoire.textContent = "Boire du cercueil"
+  btnBoire.style.margin = "1em 1em";
+
   let messageCombat = document.createElement("p");
   messageCombat.id = "message-combat";
 
@@ -32,6 +37,7 @@ window.addEventListener("DOMContentLoaded", () => {
   combatDiv.appendChild(vieMonstreP);
   combatDiv.appendChild(btnAttaquer);
   combatDiv.appendChild(btnDefendre);
+  combatDiv.appendChild(btnBoire);
   combatDiv.appendChild(messageCombat);
 
   // Crée la div contenant le monstre
@@ -56,6 +62,7 @@ window.addEventListener("DOMContentLoaded", () => {
   const Coup = new Audio('../assets/Slash.mp3');
   const Lancer = new Audio('../assets/JetSable.mp3');
   const Mort = new Audio('../assets/Defeat.mp3');
+  const Cercueil = new Audio('../assets/Cercueil.mp3')
   combatDiv.appendChild(MonstreCombat);
 
   let choix = document.querySelector("p.choice");
@@ -66,6 +73,7 @@ window.addEventListener("DOMContentLoaded", () => {
   }
 
   let vieJoueur = 100;
+  let Multiplicateur = 1;
   let vieMonstre = 100;
   let precisonMonstre = 5;
 
@@ -73,7 +81,7 @@ window.addEventListener("DOMContentLoaded", () => {
   let vieMonstreSpan = document.getElementById("vie-monstre");
 
   function attaquer() {
-    const degatsJoueur = Math.floor(Math.random() * 20) + 5;
+    const degatsJoueur = Multiplicateur * Math.floor(Math.random() * 20) + 5;
     const degatsMonstre = Math.floor(Math.random() * 20) + 5;
     let jet = Math.floor(Math.random() * 100)+1 - precisonMonstre;
 
@@ -115,7 +123,7 @@ window.addEventListener("DOMContentLoaded", () => {
   }
 
   function Action() {
-    const actionJoueur = Math.floor(Math.random() * 7) + 1
+    const actionJoueur = Math.floor(Math.random() * 7) + 1;
     const degatsMonstre = Math.floor(Math.random() * 20) + 3;
 
     precisonMonstre += actionJoueur ;
@@ -151,6 +159,30 @@ window.addEventListener("DOMContentLoaded", () => {
 
   }
 
+  function Boire() {
+    const BoissonJoueur = ((Math.random() * 1.5) + 1).toFixed(2);
+    const degatsMonstre = Math.floor(Math.random() * 20) + 11;
+    let jet = Math.floor(Math.random() * 100)+1 - precisonMonstre;
+
+    if (jet <= 0) {
+      vieJoueur += 0
+      messageCombat.textContent = `Vous buvez la potion de cercueil. Le monstre rate son attaque !.\n Vous faites maintenant ${BoissonJoueur} fois plus de dégâts !`;
+      Multiplicateur *= BoissonJoueur;
+      Cercueil.play();
+    }
+    else {
+      vieJoueur -= degatsMonstre;
+      messageCombat.textContent = `Vous buvez la potion de cercueil. Le monstre vous inflige ${degatsMonstre} dégâts !\nVous faites maintenant ${BoissonJoueur} fois plus de dégâts !`;
+      Multiplicateur *= BoissonJoueur;
+      Cercueil.play();
+    }
+
+    vieJoueurSpan.textContent = vieJoueur > 0 ? vieJoueur : 0;
+    vieMonstreSpan.textContent = vieMonstre > 0 ? vieMonstre : 0;
+
+  }
+
   btnAttaquer.addEventListener("click", attaquer);
-  btnDefendre.addEventListener("click", Action)
+  btnDefendre.addEventListener("click", Action);
+  btnBoire.addEventListener("click", Boire);
 });
