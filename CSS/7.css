@@ -3,7 +3,7 @@ body {
     background-image: url("../assets/Combat.jpg");
     background-size: cover;
     background-repeat: no-repeat;
-    overflow-y: auto;
+    overflow: hidden;
     background-attachment: fixed;
 }
 
@@ -14,8 +14,9 @@ p {
 }
 
 #combat {
-    position: relative;
-    margin: 40px auto; 
+    position: fixed;
+    left: 50%;
+    transform: translateX(-50%);
     width: 90%;
     max-width: 800px;
     background: rgba(0, 0, 0, 0.7);
@@ -76,24 +77,6 @@ p {
     color: green;
 }
 
-#btn-boire {
-  padding: 20px 60px;
-  font-size: 120%;
-  font-family: inherit;
-  background-color: grey;
-  color: rgb(17, 5, 71);
-  border: none;
-  border-radius: 8px;
-  cursor: pointer;
-  transition: transform 1s ease, background-color 0.3s ease;
-}
-
-#btn-boire:hover {
-    background-color: rgb(17, 5, 71);
-    transform: scale(1.1);
-    color: blue;
-}
-
 #monstre {
   bottom:0;
   image-rendering: pixelated;
@@ -112,16 +95,4 @@ p {
 
 .shake {
   animation: shake 0.3s;
-}
-
-@keyframes sand {
-  0% { transform: translateX(0); transform: translateY(0) }
-  25% { transform: translateX(-5px); transform: translateY(-5px) }
-  50% { transform: translateX(10px); transform: translateY(10px) }
-  75% { transform: translateX(-15px); transform: translateY(-15px) }
-  100% { transform: translateX(0); transform: translateY(0) }
-}
-
-.sand {
-  animation: sand 0.3s;
 }

@@ -1,14 +1,15 @@
 body {
     font-family:"VT323", monospace;
-    background-image: url("../assets/Chateau_au_loin.jpg");
+    background-image: url("../assets/Chevalier.jpg");
     background-size: cover;
     background-repeat: no-repeat;
-    overflow-x: hidden;
+    overflow: hidden;
     background-attachment: fixed;
 }
 
 p {
-    font-size:125%;
+    font-size:200%;
     align-items: center;
-    color:#fff;
+    color:#ffffff;
+    text-align: center;
 }
